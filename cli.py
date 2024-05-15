@@ -13,13 +13,13 @@ while True:
     if user_action.startswith('add'):
             todo = user_action[4:]
 
-            todos = functions.get_todo()
+            todos = functions.get_todos()
 
             todos.append(todo + '\n')
             functions.write_todos(todos)
 
     elif 'show' in user_action:
-            todos = functions.get_todo()
+            todos = functions.get_todos()
             for index, item in enumerate(todos):
                 item = item.strip('\n')
                 row = f"{index + 1}. {item.capitalize()}."
@@ -30,7 +30,7 @@ while True:
                 print(number)
                 number = number - 1
 
-                todos = functions.get_todo()
+                todos = functions.get_todos()
 
 
                 new_to_do = input("Enter new todo: ")
@@ -46,7 +46,7 @@ while True:
                 number = int(user_action[5:])
                 
 
-                todos = functions.get_todo()
+                todos = functions.get_todos()
                 index = number - 1
             
                 todo_to_remove = todos[index].strip('\n')
