@@ -5,7 +5,7 @@ now = time.strftime("%H:%M  %b %d %Y")
 print(F"It is now {now}")
 
 while True:
-    user_action = input("Type add, show, edit or exit, done: ")
+    user_action = input("Type add, show, edit or exit, complete: ")
     user_action = user_action.strip()
     user_action = user_action.lower()
  
@@ -41,7 +41,7 @@ while True:
                 print('Your command in not valid!')
                 continue
 
-    elif user_action.startswith('done'):
+    elif user_action.startswith('complete'):
             try:
                 number = int(user_action[5:])
                 
